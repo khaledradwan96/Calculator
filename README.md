@@ -21,6 +21,6 @@
 
 ## Demo
 
-### [Live Demo](https://khaledradwan96.github.io/Interior-Design/)
+### [Live Demo](https://khaledradwan96.github.io/Calculator/)
 
 <!-- ### [Video Review]() -->
