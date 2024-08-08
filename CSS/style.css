@@ -33,10 +33,19 @@ body {
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
   box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+}
+
+.container .calculator span#calc {
+  background-color: #e87361;
+  color: #fff;
+  grid-column: span 2;
+  border-radius: 12px;
+  width: auto;
 }
