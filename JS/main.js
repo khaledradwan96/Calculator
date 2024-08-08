@@ -3,6 +3,17 @@ const display = document.getElementById('display')
 function appendToDisplay(input){
     if(display.value == '0'){
         display.value = input
+    }else if(input == '+' || input == '-' || input == '*' || input == '/'){
+        console.log('operation')
+        if(display.value.slice(-1) == '+' || 
+            display.value.slice(-1) == '-' || 
+            display.value.slice(-1) == '*' || 
+            display.value.slice(-1) == '/'
+        ){
+            display.value = display.value.slice(0, -1) + input
+        }else{
+            display.value +=input;
+        }
     }else{
         display.value +=input;
     }
