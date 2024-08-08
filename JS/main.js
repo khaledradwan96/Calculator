@@ -1,8 +1,32 @@
-const result = document.querySelector('.result span')
-const nums = document.querySelectorAll('.calculator .num')
-const reset = document.getElementById('reset')
-const calc = document.getElementById('calc')
+const display = document.getElementById('display')
 
+function appendToDisplay(input){
+    if(display.value == '0'){
+        display.value = input
+    }else{
+        display.value +=input;
+    }
+}
 
-console.log(nums)
+function deleteNum(){
+    if(display.value.length == 1){
+        display.value = '0'
+    }else if(display.value == '0'){
+        display.value = '0'
+    }else{
+        display.value = display.value.slice(0, -1)
+    }
+}
 
+function clearDisplay(){
+    display.value = "0";
+}
+
+function calculate(){
+    try{
+        display.value = eval(display.value)
+    }
+    catch(error){
+        display.value = 'Error';
+    }
+}

@@ -6,46 +6,53 @@ body {
   align-items: center;
   font-family: "Roboto", sans-serif;
 }
-.container {
+#calculator {
   background-color: #fff;
   padding: 2rem;
   border-radius: 50px;
+  overflow: hidden;
 }
-.container .result {
-  font-size: 3rem;
-  padding: 1rem 2rem;
+#calculator #display {
+  font-size: 1.25rem;
+  padding: 2rem;
   font-weight: bold;
   background-color: #2388ff;
   color: #fff;
   margin-bottom: 1rem;
-  border-radius: 5rem;
+  border-radius: 3rem;
   text-align: right;
+  outline: none;
+  border: none;
 }
-.container .calculator {
+#calculator #keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
 }
-.container .calculator span {
-  font-size: 2rem;
-  background-color: #d8ddf0;
-  color: #576181;
-  border-radius: 50%;
+#calculator #keys button {
   width: 4rem;
   height: 4rem;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: #ffffff;
+  font-size: 2rem;
   font-weight: 600;
-  box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
 }
 
-.container .calculator span#calc {
-  background-color: #e87361;
-  color: #fff;
+#calculator #keys button#calc {
+  background-color: #399918;
   grid-column: span 2;
   border-radius: 12px;
   width: auto;
+}
+
+#calculator #keys button:hover {
+  background-color: hsl(0, 0%, 50%);
+}
+#calculator #keys button:active {
+  background-color: hsl(0, 0%, 60%);
 }
